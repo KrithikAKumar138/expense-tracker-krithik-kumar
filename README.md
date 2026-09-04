@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 💰 Expense Tracker
 
 A simple, responsive, and user-friendly **Expense Tracker Web Application** built using **HTML, CSS, and JavaScript**.
@@ -221,5 +220,5 @@ expense-tracker/
 │
 └── js/
     └── app.js
-=======
+
 
