@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Expense Tracker - Add Transaction</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app-container">
+
+
+   
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">₹</div>
+
+            <span>
+                Expense Tracker
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="index.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">▣</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="transactions.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">☷</span>
+                <span>Transactions</span>
+            </a>
+
+
+            <a
+                href="add-transaction.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">＋</span>
+                <span>Add Transaction</span>
+            </a>
+
+
+            <a
+                href="categories.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">◈</span>
+                <span>Categories</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="dark-mode-row">
+
+                <span>Dark Mode</span>
+
+                <button
+                    type="button"
+                    class="theme-switch"
+                    id="darkModeToggle"
+                >
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1 id="formPageTitle">
+                    Add Transaction
+                </h1>
+
+                <p>
+                    Record your income or expense
+                </p>
+
+            </div>
+
+        </header>
+
+
+
+   
+        <section class="form-card">
+
+            <form id="transactionForm">
+
+
+             
+                <div class="form-group">
+
+                    <label>
+                        Transaction Type
+                    </label>
+
+
+                    <div class="type-options">
+
+                        <label class="type-option income-option">
+
+                            <input
+                                type="radio"
+                                name="transactionType"
+                                value="income"
+                                checked
+                            >
+
+                            <span>
+                                Income
+                            </span>
+
+                        </label>
+
+
+                        <label class="type-option expense-option">
+
+                            <input
+                                type="radio"
+                                name="transactionType"
+                                value="expense"
+                            >
+
+                            <span>
+                                Expense
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="amount">
+                        Amount
+                    </label>
+
+                    <div class="input-with-symbol">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="amount"
+                            name="amount"
+                            placeholder="Enter amount"
+                            min="0.01"
+                            step="0.01"
+                        >
+
+                    </div>
+
+                    <small
+                        id="amountError"
+                        class="error-message"
+                    ></small>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <select
+                        id="category"
+                        name="category"
+                    >
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option value="Salary">
+                            Salary
+                        </option>
+
+                        <option value="Freelance">
+                            Freelance
+                        </option>
+
+                        <option value="Food">
+                            Food
+                        </option>
+
+                        <option value="Transport">
+                            Transport
+                        </option>
+
+                        <option value="Shopping">
+                            Shopping
+                        </option>
+
+                        <option value="Bills">
+                            Bills
+                        </option>
+
+                        <option value="Entertainment">
+                            Entertainment
+                        </option>
+
+                        <option value="Health">
+                            Health
+                        </option>
+
+                        <option value="Education">
+                            Education
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+
+                    <small
+                        id="categoryError"
+                        class="error-message"
+                    ></small>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="transactionDate">
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="transactionDate"
+                        name="date"
+                    >
+
+                    <small
+                        id="dateError"
+                        class="error-message"
+                    ></small>
+
+                </div>
+
+
+
+              
+                <div class="form-group">
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        rows="4"
+                        placeholder="Enter description"
+                    ></textarea>
+
+                    <small
+                        id="descriptionError"
+                        class="error-message"
+                    ></small>
+
+                </div>
+
+
+
+                <div
+                    id="formStatus"
+                    class="form-status"
+                ></div>
+
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        id="cancelTransaction"
+                        class="secondary-button"
+                    >
+                        Cancel
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Save Transaction
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
